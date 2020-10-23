@@ -1,11 +1,13 @@
 "use strict";
 
+// Constantes y variables
+
 let seriesList = [];
 const searchResults = document.querySelector(".js-results");
 const imgDefault =
   "https://via.placeholder.com/210x295/ffffff/666666/? text=TV.";
 
-// Pedir series al servidor
+// Pedir info al servidor
 
 function getDataFromApi() {
   const inputValue = document.querySelector(".js-inputValue").value;

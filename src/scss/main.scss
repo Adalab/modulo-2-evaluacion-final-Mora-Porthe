@@ -1,8 +1,9 @@
-/* body {
-  background-color: black;
-}
+// core
 
-.title {
-  color: #ffffff;
-}
- */
+@import "core/variables";
+@import "core/reset";
+
+// layout
+
+@import "layout/header";
+@import "layout/search";

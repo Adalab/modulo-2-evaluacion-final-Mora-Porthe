@@ -1,0 +1,12 @@
+.header {
+  background-color: $color-backgroun-primary;
+  font-family: $font-title;
+  color: $color-font-primary;
+  letter-spacing: 2px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 20px $font-title solid;
+}

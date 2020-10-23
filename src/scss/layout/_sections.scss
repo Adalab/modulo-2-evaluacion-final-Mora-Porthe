@@ -1,0 +1,9 @@
+.results-container {
+  height: 100%;
+  background-color: $color-backgroun-primary;
+  color: $color-font-primary;
+  font-family: $font-title;
+  letter-spacing: 1.5px;
+  display: flex;
+  flex-direction: row;
+}

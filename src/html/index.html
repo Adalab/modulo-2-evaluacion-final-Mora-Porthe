@@ -3,36 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Tus series favoritas</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
+    <title>Your serie is here</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
   <body>
     <header class="header">
-      <h1 class="title js-search-title">Buscador de series</h1>
-    </header>
-    <main class="main">
-      <form method="GET" role="form" class="js-search-container">
+      <h1 class="header__title js-search-title">Buscador de series</h1>
+      <form method="GET" role="form" class=" js-search-container">
         <input
-          class="js-inputValue"
+          class="text-search js-inputValue"
           type="text"
           placeholder="Enter here your search"
         />
-        <input class="js-btn-Search" type="button" value="Search" />
+        <input class="btn-Search js-btn-Search" type="button" value="Search" />
       </form>
-      <div>
-        <h2 class="title js-search-results-title">Resultado de tu búsqueda</h2>
-        <section class="js-results-container">
-          <ul class="js-results"></ul>
-        </section>
+    </header>
+      <main class="main"></main>
+      <div class="results-container js-results-container">
         <div class="js-favorites-container">
           <h2 class="title js-search-favorites-title">Tus favoritos</h2>
           <div>
             <ul class="js-favorites"></ul>
           </div>
+          <h2 class="title js-search-results-title">Resultado de tu búsqueda</h2>
+        <section class="js-results">
+          <ul class="js-results"></ul>
+        </section>
         </div>
     </main>
     <script src="./assets/js/main.js"></script>
