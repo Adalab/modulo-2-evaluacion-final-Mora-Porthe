@@ -11,11 +11,30 @@
     <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
   <body>
-    <div class="js-search-container">
-      <h1>Buscador de series</h1>
-      <input class="js-inputValue" type="text" />
-      <input class="js-btn-Search" type="button" value="Search" />
-    </div>
+    <header class="header">
+      <h1 class="title js-search-title">Buscador de series</h1>
+    </header>
+    <main class="main">
+      <form method="GET" role="form" class="js-search-container">
+        <input
+          class="js-inputValue"
+          type="text"
+          placeholder="Enter here your search"
+        />
+        <input class="js-btn-Search" type="button" value="Search" />
+      </form>
+      <div>
+        <h2 class="title js-search-results-title">Resultado de tu búsqueda</h2>
+        <section class="js-results-container">
+          <ul class="js-results"></ul>
+        </section>
+        <div class="js-favorites-container">
+          <h2 class="title js-search-favorites-title">Tus favoritos</h2>
+          <div>
+            <ul class="js-favorites"></ul>
+          </div>
+        </div>
+    </main>
     <script src="./assets/js/main.js"></script>
   </body>
 </html>
