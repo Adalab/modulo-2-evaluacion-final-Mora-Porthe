@@ -1,6 +1,6 @@
 "use strict";
 
-// Constantes y variables
+// onstantes / variables
 
 let seriesList = [];
 let favorites = [];
@@ -47,7 +47,15 @@ const paintSeries = function () {
 // Agregar a favoritos
 
 const addFavorites = (ev) => {
-  console.log(ev.target, ev.target.dataset);
+  const clickedBtn = parseInt(ev.target.dataset.id);
+  const indexFav = favorites.indexOf(clickedBtn);
+  const isFavorite = indexFav !== -1;
+  if (isFavorite === false) {
+    favorites.push(clickedBtn);
+  } else {
+    favorites.splice(indexFav, 1);
+  }
+  console.log(favorites);
 };
 
 // Escuchar eventos
