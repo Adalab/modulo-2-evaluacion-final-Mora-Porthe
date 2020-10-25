@@ -1,12 +1,28 @@
 .header {
+  height: 30vh;
   background-color: $color-backgroun-primary;
   font-family: $font-title;
   color: $color-font-primary;
   letter-spacing: 2px;
-  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-bottom: 20px $font-title solid;
+
+  .text-search {
+    height: 25px;
+    margin-top: 8px;
+    background-color: $color-font-primary;
+    border: 3px solid $color-button;
+    border-radius: 5px;
+  }
+
+  .btn-Search {
+    font-family: $font-title;
+    color: $color-font-primary;
+    background-color: $color-button;
+    border-style: none;
+    border-radius: 5px;
+    padding: 3px;
+  }
 }

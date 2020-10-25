@@ -1,9 +1,83 @@
-.results-container {
+.main-container {
   height: 100%;
   background-color: $color-backgroun-primary;
-  color: $color-font-primary;
-  font-family: $font-title;
-  letter-spacing: 1.5px;
   display: flex;
   flex-direction: row;
+  align-content: space-between;
+  font-family: $font-title;
+  color: $color-font-primary;
+  letter-spacing: 1.5px;
+}
+
+.results-container {
+  padding: 20px;
+  margin-top: 20px;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: flex-end; */
+  align-items: flex-end;
+  flex-wrap: wrap;
+  overflow: auto;
+  justify-content: center;
+}
+
+.search-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  li {
+    width: 210px;
+    height: 305px;
+    margin: 15px 15px;
+    font-size: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-backgroun-secundary;
+    border-radius: 5px;
+    border: 5px solid $color-button;
+    box-shadow: #000 0px 0px 13px 1px;
+  }
+
+  .serie-title {
+    font-family: $font-title;
+    font-size: 18px;
+    color: $color-font-secundary;
+    margin: 20px;
+    text-align: center;
+  }
+
+  .serie-img {
+    height: 160px;
+    width: 140px;
+    border-radius: 10px;
+  }
+
+  .fav-btn {
+    padding: 3px;
+    font-family: $font-title;
+    color: $color-font-primary;
+    background-color: $color-button;
+    border-style: none;
+    border: 2px solid $color-font-secundary;
+    border-radius: 5px;
+    margin-top: 15px;
+  }
+}
+
+.fav-container {
+  margin: 20px;
+  padding: 20px;
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  order: -1;
+  overflow: auto;
 }
