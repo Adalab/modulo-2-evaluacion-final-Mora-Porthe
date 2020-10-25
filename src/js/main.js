@@ -68,6 +68,7 @@ const addFavorites = function (ev) {
     favorites.splice(indexFav, 1);
   }
   console.log(favorites);
+  setInLocalStorage();
 };
 
 // pintar favoritos
@@ -100,3 +101,23 @@ const addFavorites = function (ev) {
 
 const btn = document.querySelector(".js-btn-Search");
 btn.addEventListener("click", getDataFromApi);
+
+// local storage
+
+const getFromLocalStorage = () => {
+  const localStorageFavorites = localStorage.getItem("favorites");
+  if (localStorageFavorites !== null) {
+    favorites = JSON.parse(localStorageFavorites);
+    // Pendiente llamar a la función fintar favoritos
+  }
+};
+
+const setInLocalStorage = () => {
+  const stringifyFavorites = JSON.stringify(favorites);
+  localStorage.setItem("favorites", stringifyFavorites);
+};
+
+// start aplication
+
+getFromLocalStorage();
+getDataFromApi();
