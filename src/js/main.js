@@ -54,23 +54,25 @@ const lisenAddFavoritesBtns = () => {
 
 // Agregar a favoritos
 
-const addFavorites = (ev) => {
+const addFavorites = function (ev) {
   // obtengo el ID del producto clickeado
   const clickedBtn = parseInt(ev.target.dataset.id);
   //  obtengo el indice del elemento clickeado
   const indexFav = favorites.indexOf(clickedBtn);
   //  determino una operacion logica que retorna true o false
   const isFavorite = indexFav !== -1;
+  console.log(isFavorite);
   if (isFavorite === false) {
     favorites.push(clickedBtn);
   } else {
     favorites.splice(indexFav, 1);
   }
+  console.log(favorites);
 };
 
 // pintar favoritos
 
-const paintFavorites = function () {
+/* const paintFavorites = function () {
   let codeHTML = "";
   for (const favorite of favorites) {
     const indexFav = favorites.indexOf(clickedBtn);
@@ -92,7 +94,7 @@ const paintFavorites = function () {
     const favoriteList = document.querySelector(".ja-favorites");
     favoriteList.innerHTML = codeHTML;
   }
-};
+}; */
 
 // Escuchar eventos
 
