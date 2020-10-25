@@ -1,6 +1,9 @@
-.main-container {
-  height: 100%;
+body {
+  height: 100vh;
   background-color: $color-backgroun-primary;
+}
+
+.main-container {
   display: flex;
   flex-direction: row;
   font-family: $font-title;
@@ -9,14 +12,13 @@
 }
 
 .results-container {
+  margin: 20px;
   padding: 20px;
-  margin-top: 20px;
   width: 70%;
-  height: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  overflow: auto;
+  /* overflow: auto; */
   justify-content: center;
 }
 
