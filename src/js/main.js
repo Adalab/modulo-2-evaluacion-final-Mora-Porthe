@@ -1,6 +1,6 @@
 "use strict";
 
-// onstantes / variables
+// constants & variables
 
 let seriesList = [];
 let favorites = [];
@@ -9,7 +9,7 @@ const favoritesList = document.querySelector(".js-favorites");
 const imgDefault =
   "https://via.placeholder.com/210x295/ffffff/666666/? text=TV.";
 
-// Pedir info al servidor
+// get data from server
 
 function getDataFromApi() {
   const inputValue = document.querySelector(".js-inputValue").value;
@@ -21,7 +21,7 @@ function getDataFromApi() {
     });
 }
 
-// pintar series
+// paint series
 
 const paintSeries = function () {
   let codeHTML = "";
@@ -44,7 +44,7 @@ const paintSeries = function () {
   lisenAddFavoritesBtns();
 };
 
-// Escuchar boton favoritos
+// listen button favorites
 
 const lisenAddFavoritesBtns = () => {
   const btnsFavorites = document.querySelectorAll(".js-add-fav-btn");
@@ -53,7 +53,7 @@ const lisenAddFavoritesBtns = () => {
   }
 };
 
-// Agregar a favoritos
+// add to favorites
 
 const addFavorites = function (ev) {
   // obtengo el ID del producto clickeado
@@ -74,7 +74,7 @@ const addFavorites = function (ev) {
   setInLocalStorage();
 };
 
-// pintar favoritos
+// paint favorites
 
 const paintFavorites = function () {
   let codeHTML = "";
@@ -96,7 +96,7 @@ const paintFavorites = function () {
   }
 };
 
-// Escuchar eventos
+// listen events
 
 const btn = document.querySelector(".js-btn-Search");
 btn.addEventListener("click", getDataFromApi);
