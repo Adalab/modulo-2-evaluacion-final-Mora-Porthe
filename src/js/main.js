@@ -64,15 +64,12 @@ const addFavorites = function (ev) {
   );
   //  determino una operacion logica que retorna true o false
   const isFavorite = indexFav !== -1;
-  console.log(isFavorite);
   if (isFavorite === false) {
     const foundSerie = seriesList.find((serie) => serie.show.id === clickedBtn);
     favorites.push(foundSerie);
   } else {
     favorites.splice(indexFav, 1);
   }
-  debugger;
-  console.log(favorites);
   paintFavorites();
   setInLocalStorage();
 };
@@ -82,9 +79,6 @@ const addFavorites = function (ev) {
 const paintFavorites = function () {
   let codeHTML = "";
   for (const favorite of favorites) {
-    /* const indexFav = favorites.indexOf(clickedBtn);
-    const isFavorite = indexFav !== -1; */
-
     if (favorite.show.image !== null) {
       codeHTML += `<li>`;
       codeHTML += `<img src="${favorite.show.image.medium}" class="serie-img" alt="${favorite.show.name}"/>`;
@@ -98,8 +92,8 @@ const paintFavorites = function () {
       codeHTML += `<button class="js-take-fav-btn" data-id="${favorite.show.id}">X</button>`;
       codeHTML += `</li>`;
     }
+    favoritesList.innerHTML = codeHTML;
   }
-  favoritesList.innerHTML = codeHTML;
 };
 
 // Escuchar eventos
