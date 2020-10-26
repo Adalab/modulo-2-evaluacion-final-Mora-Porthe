@@ -5,6 +5,7 @@
 let seriesList = [];
 let favorites = [];
 const searchResults = document.querySelector(".js-search-results");
+const favoritesList = document.querySelector(".js-favorites");
 const imgDefault =
   "https://via.placeholder.com/210x295/ffffff/666666/? text=TV.";
 
@@ -58,44 +59,48 @@ const addFavorites = function (ev) {
   // obtengo el ID del producto clickeado
   const clickedBtn = parseInt(ev.target.dataset.id);
   //  obtengo el indice del elemento clickeado
-  const indexFav = favorites.indexOf(clickedBtn);
+  const indexFav = favorites.findIndex(
+    (favSerie) => favSerie.show.id === clickedBtn
+  );
   //  determino una operacion logica que retorna true o false
   const isFavorite = indexFav !== -1;
   console.log(isFavorite);
   if (isFavorite === false) {
-    favorites.push(clickedBtn);
+    const foundSerie = seriesList.find((serie) => serie.show.id === clickedBtn);
+    favorites.push(foundSerie);
   } else {
     favorites.splice(indexFav, 1);
   }
+  debugger;
   console.log(favorites);
+  paintFavorites();
   setInLocalStorage();
 };
 
 // pintar favoritos
 
-/* const paintFavorites = function () {
+const paintFavorites = function () {
   let codeHTML = "";
   for (const favorite of favorites) {
-    const indexFav = favorites.indexOf(clickedBtn);
-    const isFavorite = indexFav !== -1;
+    /* const indexFav = favorites.indexOf(clickedBtn);
+    const isFavorite = indexFav !== -1; */
 
-    if (show.show.image !== null) {
+    if (favorite.show.image !== null) {
       codeHTML += `<li>`;
-      codeHTML += `<img src="${show.show.image.medium}" class="serie-img" alt="${show.show.name}"/>`;
-      codeHTML += `<h3 class="serie_title">${show.show.name}</h3>`;
-      codeHTML += `<button class="js-take-fav-btn" data-id="${show.show.id}">X</button>`;
+      codeHTML += `<img src="${favorite.show.image.medium}" class="serie-img" alt="${favorite.show.name}"/>`;
+      codeHTML += `<h3 class="serie_title">${favorite.show.name}</h3>`;
+      codeHTML += `<button class="js-take-fav-btn" data-id="${favorite.show.id}">X</button>`;
       codeHTML += `</li>`;
     } else {
       codeHTML += `<li>`;
-      codeHTML += `<img src="${imgDefault}" class="serie-img" alt="${show.show.name}"/>`;
-      codeHTML += `<h3 class="serie_title">${show.show.name}</h3>`;
-      codeHTML += `<button class="js-take-fav-btn" data-id="${show.show.id}">X</button>`;
+      codeHTML += `<img src="${imgDefault}" class="serie-img" alt="${favorite.show.name}"/>`;
+      codeHTML += `<h3 class="serie_title">${favorite.show.name}</h3>`;
+      codeHTML += `<button class="js-take-fav-btn" data-id="${favorite.show.id}">X</button>`;
       codeHTML += `</li>`;
     }
-    const favoriteList = document.querySelector(".ja-favorites");
-    favoriteList.innerHTML = codeHTML;
   }
-}; */
+  favoritesList.innerHTML = codeHTML;
+};
 
 // Escuchar eventos
 
@@ -108,7 +113,7 @@ const getFromLocalStorage = () => {
   const localStorageFavorites = localStorage.getItem("favorites");
   if (localStorageFavorites !== null) {
     favorites = JSON.parse(localStorageFavorites);
-    // Pendiente llamar a la función fintar favoritos
+    paintFavorites();
   }
 };
 
