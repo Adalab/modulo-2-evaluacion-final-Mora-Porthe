@@ -15,7 +15,7 @@ Al hacer clic sobre el botón de "Buscar", la aplicación se conecta al API ab
 Al hacer clic sobre el botón de favorito de una serie, el color de fondo y el de fuente se intercambian, confirmando así que se ha añadido a nuestro listado de favoritos que veremos reflejado en la parte izquierda de la pantalla. 
 
 *Borrar favoritos:
-Podremos quitar un favorito de nuestra lista al hacer click sobre el ícono "eliminar" dentro del listado de favoritos, o bien al pulsar sobre el botón "quitar de la lista" en la tarjeta de la propia serie en los resultados de búsqueda.   
+Podremos quitar un favorito de nuestra lista al hacer click sobre el ícono "eliminar" dentro del listado de favoritos, o bien al pulsando nuevamente sobre el botón "favorito" en la tarjeta de la propia serie en los resultados de búsqueda.   
 
 Cualquier comentario o duda, estamos aquí para ustedes.
 ¡Que la disfruten!
