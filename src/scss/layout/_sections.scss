@@ -19,53 +19,53 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-}
 
-.search-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-
-  li {
-    width: 210px;
-    height: 305px;
-    margin: 15px 15px;
-    font-size: 0.75rem;
+  .search-list {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    background-color: $color-backgroun-secundary;
-    border-radius: 5px;
-    border: 5px solid $color-button;
-    box-shadow: #000 0px 0px 13px 1px;
-  }
 
-  .serie-title {
-    font-family: $font-title;
-    font-size: 18px;
-    color: $color-font-secundary;
-    margin: 20px;
-    text-align: center;
-  }
+    li {
+      width: 210px;
+      height: 305px;
+      margin: 15px 15px;
+      font-size: 0.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: $color-backgroun-secundary;
+      border-radius: 5px;
+      border: 5px solid $color-button;
+      box-shadow: #000 0px 0px 13px 1px;
+    }
 
-  .serie-img {
-    height: 160px;
-    width: 140px;
-    border-radius: 10px;
-  }
+    .serie-title {
+      font-family: $font-title;
+      font-size: 18px;
+      color: $color-font-secundary;
+      margin: 20px;
+      text-align: center;
+    }
 
-  .fav-btn {
-    padding: 3px;
-    font-family: $font-title;
-    color: $color-font-primary;
-    background-color: $color-button;
-    border-style: none;
-    border: 2px solid $color-font-secundary;
-    border-radius: 5px;
-    margin-top: 15px;
-    outline: none;
+    .serie-img {
+      height: 160px;
+      width: 140px;
+      border-radius: 10px;
+    }
+
+    .fav-btn {
+      padding: 3px;
+      font-family: $font-title;
+      color: $color-font-primary;
+      background-color: $color-button;
+      border-style: none;
+      border: 2px solid $color-font-secundary;
+      border-radius: 5px;
+      margin-top: 15px;
+      outline: none;
+    }
   }
 }
 
@@ -88,8 +88,8 @@ body {
     margin: 15px 5px;
     list-style: none;
     .fav-li {
-      min-width: 190px;
-      margin: 15px 5px;
+      min-width: 200px;
+      margin: 15px 5px 15px 0px;
       padding: 5px;
       display: flex;
       flex-direction: row;
@@ -117,7 +117,7 @@ body {
       border-radius: 10px;
     }
     .fav-btn {
-      padding: 3px;
+      padding: 2px 4px;
       font-family: $font-title;
       color: $color-font-primary;
       background-color: $color-button;
