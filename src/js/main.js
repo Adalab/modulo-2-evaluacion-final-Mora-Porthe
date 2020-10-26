@@ -80,16 +80,16 @@ const paintFavorites = function () {
   let codeHTML = "";
   for (const favorite of favorites) {
     if (favorite.show.image !== null) {
-      codeHTML += `<li>`;
+      codeHTML += `<li class="fav-li">`;
       codeHTML += `<img src="${favorite.show.image.medium}" class="serie-img" alt="${favorite.show.name}"/>`;
-      codeHTML += `<h3 class="serie_title">${favorite.show.name}</h3>`;
-      codeHTML += `<button class="js-take-fav-btn" data-id="${favorite.show.id}">X</button>`;
+      codeHTML += `<h3 class="serie-title">${favorite.show.name}</h3>`;
+      codeHTML += `<button class="fav-btn js-take-fav-btn" data-id="${favorite.show.id}">X</button>`;
       codeHTML += `</li>`;
     } else {
-      codeHTML += `<li>`;
+      codeHTML += `<li class="fav-li">`;
       codeHTML += `<img src="${imgDefault}" class="serie-img" alt="${favorite.show.name}"/>`;
-      codeHTML += `<h3 class="serie_title">${favorite.show.name}</h3>`;
-      codeHTML += `<button class="js-take-fav-btn" data-id="${favorite.show.id}">X</button>`;
+      codeHTML += `<h3 class="serie-title">${favorite.show.name}</h3>`;
+      codeHTML += `<button class="fav-btn js-take-fav-btn" data-id="${favorite.show.id}">X</button>`;
       codeHTML += `</li>`;
     }
     favoritesList.innerHTML = codeHTML;
