@@ -51,6 +51,11 @@ const lisenAddFavoritesBtns = () => {
   for (const btnFavorites of btnsFavorites) {
     btnFavorites.addEventListener("click", addFavorites);
   }
+  const btnsRemoveFavorites = document.querySelectorAll(".js-remove-fav-btn");
+  console.log(btnsRemoveFavorites);
+  for (const btnRemoveFavorite of btnsRemoveFavorites) {
+    btnRemoveFavorite.addEventListener("click", addFavorites);
+  }
 };
 
 // add to favorites
@@ -83,17 +88,18 @@ const paintFavorites = function () {
       codeHTML += `<li class="fav-li">`;
       codeHTML += `<img src="${favorite.show.image.medium}" class="serie-img" alt="${favorite.show.name}"/>`;
       codeHTML += `<h3 class="serie-title">${favorite.show.name}</h3>`;
-      codeHTML += `<button class="fav-btn js-take-fav-btn" data-id="${favorite.show.id}">X</button>`;
+      codeHTML += `<button class="fav-btn js-remove-fav-btn" data-id="${favorite.show.id}">X</button>`;
       codeHTML += `</li>`;
     } else {
       codeHTML += `<li class="fav-li">`;
       codeHTML += `<img src="${imgDefault}" class="serie-img" alt="${favorite.show.name}"/>`;
       codeHTML += `<h3 class="serie-title">${favorite.show.name}</h3>`;
-      codeHTML += `<button class="fav-btn js-take-fav-btn" data-id="${favorite.show.id}">X</button>`;
+      codeHTML += `<button class="fav-btn js-remove-fav-btn" data-id="${favorite.show.id}">X</button>`;
       codeHTML += `</li>`;
     }
-    favoritesList.innerHTML = codeHTML;
   }
+  favoritesList.innerHTML = codeHTML;
+  lisenAddFavoritesBtns();
 };
 
 // listen events
