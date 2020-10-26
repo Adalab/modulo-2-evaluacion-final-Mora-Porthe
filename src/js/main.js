@@ -52,7 +52,6 @@ const lisenAddFavoritesBtns = () => {
     btnFavorites.addEventListener("click", addFavorites);
   }
   const btnsRemoveFavorites = document.querySelectorAll(".js-remove-fav-btn");
-  console.log(btnsRemoveFavorites);
   for (const btnRemoveFavorite of btnsRemoveFavorites) {
     btnRemoveFavorite.addEventListener("click", addFavorites);
   }
