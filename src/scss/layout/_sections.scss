@@ -65,6 +65,7 @@ body {
     border: 2px solid $color-font-secundary;
     border-radius: 5px;
     margin-top: 15px;
+    outline: none;
   }
 }
 
@@ -123,6 +124,7 @@ body {
       border-style: none;
       border: 2px solid $color-font-secundary;
       border-radius: 5px;
+      outline: none;
     }
   }
 }

@@ -16,6 +16,7 @@
     background-color: $color-font-primary;
     border: 3px solid $color-button;
     border-radius: 5px;
+    outline: none;
   }
 
   .btn-Search {
@@ -25,5 +26,6 @@
     border-style: none;
     border-radius: 5px;
     padding: 3px;
+    outline: none;
   }
 }
